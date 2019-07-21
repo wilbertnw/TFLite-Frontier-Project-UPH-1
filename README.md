@@ -63,15 +63,32 @@ py -m scripts.label_image --graph=tf_files/retrained_graph.pb  --image=PATH_TO_Y
 
 MobileNet is a small efficient convolution neural network. "convolution" means that the same calculation are performed at each location in the image.
 
-MobileNet uses two kind of operations: a 3x3 depthwise convolution and a 1x1 a pointwise convolusion. the architecture is different than the "traditional" CNN's which instead using a 3x3 convolution layer.
+MobileNet uses a Depthwise Separable Convolution, which is divided into 2 kind of operation: a 3x3 depthwise convolution and a 1x1 a pointwise convolusion. the architecture is different than the "traditional" CNN's which instead using a 3x3 convolution layer.
 
 A few things that MobileNet is more favorable beacuse they're insanely small, fast, remarkably accurate, and and easy to tune for resources vs.accuracy. which is the reason why it is so important for our project, the mobile deep learning task are mostly performed in the cloud, and this is change quickly. it is more practical to use a system that has no requirement of internet connection, it is more efficient and faster.
 
+The standard convolutional layer is parameterized by convolution kernel K of size DK × DK × M × N where DK is the spatial dimension of the kernel assumed to be square and M is number of input channels and N is the number of output channels as defined previously.
+
+(a) Standard Convoltuion Filters
+![standard convolution filter](https://user-images.githubusercontent.com/35583681/61589703-4dea5800-abd8-11e9-9cef-d8c65e80a923.PNG)
+
+(b) Depthwise Convolutional Filters
+![Depthwise Convolutional Filters](https://user-images.githubusercontent.com/35583681/61589741-eda7e600-abd8-11e9-865c-344562dfd135.PNG)
+
+(c) 1X1 Pointwise Convolution
+![1x1 pointwise  convolution filter](https://user-images.githubusercontent.com/35583681/61589781-50997d00-abd9-11e9-8ae2-dccec14f3b1c.PNG)
+
+left: standard Convolutional layer with batchnorm and ReLU. Right: Depthwise Separable convolutions with Depthwise and Pointwise layer combine with batchnorm and ReLU.
+![cnn figure](https://user-images.githubusercontent.com/35583681/61589997-14b3e700-abdc-11e9-9943-d352d2a1fdf4.PNG)
+
+## Face embeddings with MobileNet
+the MobileNet neural network has been tested before by using it in FaceRecognition, as it is written inside its paper. The FaceNet model is a face recognition model, it builds the face embeddingsbased on triplet loss. using the FaceNet model, the reserahcer use distillation to train by minimizing the squared differences of the output. below is the result:
+![face embbeddings](https://user-images.githubusercontent.com/35583681/61590530-fd2d2c00-abe4-11e9-87d3-1bfb49dabfc8.PNG)
 
 ## Team Member
 
 Ricky - 00000020025 - rickygani10@gmail.com - Informatics 2016 Universitas Pelita Harapan
-Wilbert Nataniel - 00000019924 - wilbert.wijaya@yahoo.com - Informatics 2016 Universitas Pelita Harapan
+Wilbert Nathaniel - 00000019924 - wilbert.wijaya@yahoo.com - Informatics 2016 Universitas Pelita Harapan
 
 Project Link: [https://github.com/ZyphonGT/TFLite-Frontier-Project-UPH](https://github.com/ZyphonGT/TFLite-Frontier-Project-UPH)
 

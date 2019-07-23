@@ -35,6 +35,19 @@ This program was build using these versions of framework (Older or Newer version
 pip install --upgrade "tensorflow==1.7.*"
 ```
 
+### Data Scraping
+We collect our data using a python script which will automatically download all images regarding the provided keyword
+```sh
+googleimagesdownload -k "apple" -sk "fruit" -l 1000 --chromedriver D:\chromedriver.exe
+```
+
+### Data Cleansing
+Because we bulk-downloaded our data from google. Some images may be unfit to be used.
+```sh
+autocrop -o ./cropped/ -r ./cropped/reject/
+```
+
+
 ### Installation
 
 1. Clone the repo
@@ -46,6 +59,13 @@ git clone https://github.com/ZyphonGT/TFLite-Frontier-Project-UPH
 4. Open the project file `Project_File/android/tflite`
 5. After Android Studio finishes loading, click on `Sync Project with Gradle Files`
 6. Run the app
+
+### Setting Up
+Retraining The Pre-Trained Models
+```sh
+py -m scripts.retrain --bottleneck_dir=tf_files/bottlenecks --how_many_training_steps=500 --model_dir=tf_files/models/ --summaries_dir=tf_files/training_summaries/mobilenet_0.50_224 --output_graph=tf_files/retrained_graph.pb --output_labels=tf_files/retrained_labels.txt --architecture=mobilenet_0.50_224 --image_dir=tf_files/...
+```
+
 
 ### CLI Usage
 

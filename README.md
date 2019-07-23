@@ -110,6 +110,8 @@ left: standard Convolutional layer with batchnorm and ReLU. Right: Depthwise Sep
 the MobileNet neural network has been tested before by using it in FaceRecognition, as it is written inside its paper. The FaceNet model is a face recognition model, it builds the face embeddingsbased on triplet loss. using the FaceNet model, the reserahcer use distillation to train by minimizing the squared differences of the output. below is the result:
 ![face embbeddings](https://user-images.githubusercontent.com/35583681/61590530-fd2d2c00-abe4-11e9-87d3-1bfb49dabfc8.PNG)
 
+Source: https://arxiv.org/pdf/1704.04861.pdf
+
 ## Team Member
 
 Ricky - 00000020025 - rickygani10@gmail.com - Informatics 2016 Universitas Pelita Harapan

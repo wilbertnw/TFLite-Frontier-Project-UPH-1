@@ -12,8 +12,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
 This project is about building an Android-based image classification program using a pre-trained graph, MobileNet, which is provided by TensorFlow. This project was done with the help of "[TensorFlow for Poets 2: TFLite Android](https://codelabs.developers.google.com/codelabs/tensorflow-for-poets-2-tflite)" and "[TensorFlow For Poets](https://codelabs.developers.google.com/codelabs/tensorflow-for-poets)", which are tutorials from CodeLabs by Google. With this program, the user will be given a label (and the percentage of the confidence) of the object recorded real-time using the device camera. 
 
 ### Built With

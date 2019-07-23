@@ -67,14 +67,20 @@ A few things that MobileNet is more favorable beacuse they're insanely small, fa
 
 The standard convolutional layer is parameterized by convolution kernel K of size DK × DK × M × N where DK is the spatial dimension of the kernel assumed to be square and M is number of input channels and N is the number of output channels as defined previously.
 
-(a) Standard Convoltuion Filters
+(a) Standard Convolution Filters
 ![standard convolution filter](https://user-images.githubusercontent.com/35583681/61589703-4dea5800-abd8-11e9-9cef-d8c65e80a923.PNG)
+
+![](https://miro.medium.com/max/963/1*XloAmCh5bwE4j1G7yk5THw.png)
 
 (b) Depthwise Convolutional Filters
 ![Depthwise Convolutional Filters](https://user-images.githubusercontent.com/35583681/61589741-eda7e600-abd8-11e9-865c-344562dfd135.PNG)
 
+![](https://miro.medium.com/max/963/1*yG6z6ESzsRW-9q5F_neOsg.png)
+
 (c) 1X1 Pointwise Convolution
 ![1x1 pointwise  convolution filter](https://user-images.githubusercontent.com/35583681/61589781-50997d00-abd9-11e9-8ae2-dccec14f3b1c.PNG)
+
+![](https://miro.medium.com/max/963/1*37sVdBZZ9VK50pcAklh8AQ.png)
 
 left: standard Convolutional layer with batchnorm and ReLU. Right: Depthwise Separable convolutions with Depthwise and Pointwise layer combine with batchnorm and ReLU.
 ![cnn figure](https://user-images.githubusercontent.com/35583681/61589997-14b3e700-abdc-11e9-9943-d352d2a1fdf4.PNG)

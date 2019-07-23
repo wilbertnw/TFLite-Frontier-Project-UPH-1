@@ -4,7 +4,7 @@
   <h1 align="center">TFLite-Frontier-Project-UPH</h1>
   
   <p align="center">
-    A Ligth-Weight Image Classifier Android App
+    A Light-Weight Image Classifier Android App
     <br />
   </p>
 </p>
